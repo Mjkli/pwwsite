@@ -2,7 +2,7 @@
 import React,{Component} from "react";
 import {MenuItems} from "./MenuItems";
 import  "./NavBar.css";
-import {Button} from "../Button"
+
 
 class NavBar extends Component{
 
@@ -15,7 +15,7 @@ class NavBar extends Component{
     render(){
         return(
             <nav className="NavBarItems">
-                <h1 className="navbar-logo">React <i className="fab fa-react"></i></h1>
+                <h1 className="navbar-logo">Prestige WorldWide <i class="fas fa-globe-americas"></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.onClick ? 'fas fa-times' : 'fas fa-bars'}></i>
                     
@@ -31,7 +31,7 @@ class NavBar extends Component{
                         )
                     })}
                 </ul>
-                <Button>Sign Up</Button>
+                
 
 
 
