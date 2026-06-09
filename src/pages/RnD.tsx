@@ -1,4 +1,4 @@
-function RnD(){
+const RnD = () => {
     return(
         <>
             <h1>R&D Page</h1>

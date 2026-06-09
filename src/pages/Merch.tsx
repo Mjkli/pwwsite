@@ -1,4 +1,4 @@
-function Merch(){
+const Merch = () => {
     return(
         <>
             <h1>Merch Page</h1>
