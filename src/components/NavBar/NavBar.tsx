@@ -1,47 +1,54 @@
-import { useState } from "react";
+import React from "react";
 import "./NavBar.css";
 
-function NavBar() {
-    const [clicked, setClicked] = useState(false);
-
-    const handleClick = () => {
-        setClicked(prev => !prev);
-    };
+function NavBar({ setMainPage }: { setMainPage: (page: string) => void }) {
+    let [isNavHidden, setIsNavHidden] = React.useState(false);
 
     return (
-        <nav className="NavBarItems">
-            <h1 className="navbar-logo">Prestige WorldWide <i className="fas fa-globe-americas"></i></h1>
-            <div className="menu-icon" onClick={handleClick}>
-                <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-            </div>
-            <ul>
-                <button type="button">
-                    Home
-                </button>
-                <button type="button">
-                    Management
-                </button>
-                <button type="button">
-                    Research and Development
-                </button>
-                <button type="button">
-                    Security
-                </button>
-                <button type="button">
-                    Demo
-                </button>
-                <button type="button">
-                    Investors?
-                </button>
-                <button type="button">
-                    Merch
-                </button>
-                <button type="button">
-                    Contact Us
-                </button>
-            </ul>
-        </nav>
-    )
+        <>  
+            { isNavHidden ? null : (
+                <div className="navbar">
+                    <button onClick={() => setMainPage("Home")}>
+                        Home
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Management")}>
+                        Management
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Research and Development")}>
+                        Research and Development
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Security")}>
+                        Security
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Demo")}>
+                        Demo
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Investors")}>
+                        Investors
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Merch")}>
+                        Merch
+                    </button>
+                    <button type="button" onClick={() => setMainPage("Contact Us")}>
+                        Contact Us
+                    </button>
+                </div>
+            )}
+            { isNavHidden ? (
+                <div className="nav-toggle">
+                    <button onClick={() => setIsNavHidden(false)}>
+                        ☰
+                    </button>
+                </div>
+            ) : (
+                <div className="nav-toggle">
+                    <button onClick={() => setIsNavHidden(true)}>
+                        ×
+                    </button>
+                </div>
+            )}
+        </>
+    );
 }
 
 export default NavBar;
