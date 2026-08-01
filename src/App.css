@@ -22,8 +22,12 @@ body {
 }
 
 .navcontainer {
-    width: 200px;
-    background-color: #01ffe6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
     display: flex;
     flex-direction: row;
+    z-index: 1000;
 }

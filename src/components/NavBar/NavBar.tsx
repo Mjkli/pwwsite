@@ -34,19 +34,9 @@ function NavBar({ setMainPage }: { setMainPage: (page: string) => void }) {
                     </button>
                 </div>
             )}
-            { isNavHidden ? (
-                <div className="nav-toggle">
-                    <button onClick={() => setIsNavHidden(false)}>
-                        ☰
-                    </button>
-                </div>
-            ) : (
-                <div className="nav-toggle">
-                    <button onClick={() => setIsNavHidden(true)}>
-                        ×
-                    </button>
-                </div>
-            )}
+            <button className="hamburger" onClick={() => setIsNavHidden(!isNavHidden)}>
+                ☰
+            </button>
         </>
     );
 }
