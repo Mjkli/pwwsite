@@ -15,7 +15,7 @@ function App() {
         <Navbar setMainPage={setMainPage} />
       </div>
       <div className="app">
-        <Core mainPage={mainPage} />
+        <Core mainPage={mainPage} setMainPage={setMainPage} />
       </div>
     </>
   );

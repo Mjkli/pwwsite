@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 
 function NavBar({ setMainPage }: { setMainPage: (page: string) => void }) {
-    let [isNavHidden, setIsNavHidden] = React.useState(false);
+    let [isNavHidden, setIsNavHidden] = React.useState(true);
 
     return (
         <>  
