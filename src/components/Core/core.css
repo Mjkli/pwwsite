@@ -2,4 +2,24 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
+    position: relative;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    margin-top: -350px;
+}
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    filter: grayscale(100%);
 }

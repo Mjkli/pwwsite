@@ -1,28 +1,36 @@
 .header {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    color: #ffffff;
-    background-color: #000000;
-    border: 2px solid #000000;
     box-sizing: border-box;
-    top: 0;
-    padding: 100px;
     width: 100%;
-    box-sizing: border-box;
-    z-index: 500;
-    opacity: 0.1;
+    z-index: 1000;
+    position: relative;
 }
 
 .header-button {
-    font-size: 13px;
-    font-weight: 500;
-    padding: 5px 10px;
-    color: #e6fffa;
     background-color: transparent;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
     border: none;
+    z-index: 1150;
+    background-image: url("../../assets/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    width: 300px;   /* buttons with no text content need explicit size */
+    height: 300px;
+}
+
+.header-box {
+    position: absolute;   /* takes it out of flex flow so it can overlap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1100;   /* below the button, but positioned so it can render behind it */
 }
