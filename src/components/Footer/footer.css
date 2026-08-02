@@ -70,6 +70,12 @@
     background-position: center;
     background-size: cover;
 }
+.footer-careers {
+    background-image: url("../../assets/careers.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .footer-button:hover {
     color: #3bb4ff;
