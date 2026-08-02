@@ -6,7 +6,7 @@ const RnD = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <>
             <Header setMainPage={setMainPage} />
             <h1>R&D Page</h1>
-            <Footer />
+            <Footer setMainPage={setMainPage} />
         </>
     )
 }

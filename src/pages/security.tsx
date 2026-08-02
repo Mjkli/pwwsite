@@ -6,7 +6,7 @@ const Security = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <>
             <Header setMainPage={setMainPage} />
             <h1>Security Page</h1>
-            <Footer />
+            <Footer setMainPage={setMainPage} />
         </>
     )
 }

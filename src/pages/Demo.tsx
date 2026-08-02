@@ -7,7 +7,7 @@ const Demo = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <>
             <Header setMainPage={setMainPage} />
             <h1>Demo Page</h1>
-            <Footer />
+            <Footer setMainPage={setMainPage} />
         </>
     )
 }

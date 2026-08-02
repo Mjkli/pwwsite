@@ -8,7 +8,7 @@ const Management = ({ setMainPage }: { setMainPage: (page: string) => void }) =>
         <>
             <Header setMainPage={setMainPage} />
             <h1>Management Page</h1>
-            <Footer />
+            <Footer setMainPage={setMainPage} />
         </>
     )
 }

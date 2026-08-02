@@ -7,7 +7,7 @@ const Merch = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <>
             <Header setMainPage={setMainPage} />
             <h1>Merch Page</h1>
-            <Footer />
+            <Footer setMainPage={setMainPage} />
         </>
     )
 }

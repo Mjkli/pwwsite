@@ -7,7 +7,7 @@ const Investment = ({ setMainPage }: { setMainPage: (page: string) => void }) =>
     <div>
       <Header setMainPage={setMainPage} />
       <h1>Investment Page</h1>
-      <Footer />
+      <Footer setMainPage={setMainPage} />
     </div>
   );
 }
