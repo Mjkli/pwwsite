@@ -8,10 +8,10 @@ const Management = ({ setMainPage }: { setMainPage: (page: string) => void }) =>
         <>
             <Header setMainPage={setMainPage} />
             <div className="page-content">
-                <div className="photo-container">
-                    <img src="../assets/signon_building.png" alt="Signon Building" className="signon-building" />
-                </div>
-                <h1>Management Page</h1>
+                <h1>Financial portfolios</h1>
+                <h1>Insurance</h1>
+                <h1>Computers</h1>
+                <h1>Black Lether gloves</h1>
             </div>
             <Footer setMainPage={setMainPage} />
         </>

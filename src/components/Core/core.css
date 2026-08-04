@@ -11,15 +11,19 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     z-index: 1;
     position: relative;
     width: 100%;
-    margin-top: -350px;
+    margin-top: -300px;
 }
 .photo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 400px;
     width: 100%;
     filter: grayscale(100%);
+    box-sizing: border-box;
+    background-image: url("");
 }

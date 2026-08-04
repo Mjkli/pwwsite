@@ -9,6 +9,8 @@ const Security = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
             <Header setMainPage={setMainPage} />
             <div className="page-content">
                 <h1>Security Page</h1>
+                <h1>Top notch security personel</h1>
+                <h1>Security dog Availability</h1>
             </div>
             <Footer setMainPage={setMainPage} />
         </>

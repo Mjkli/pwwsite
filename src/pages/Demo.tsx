@@ -8,7 +8,8 @@ const Demo = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <>
             <Header setMainPage={setMainPage} />
             <div className="page-content">
-                <h1>Demo Page</h1>
+                <h1>Demo Page: Flashy New release page showcasing the BnH music vid</h1>
+                <h1>Embedding link to BnH on youtube</h1>
             </div>
             <Footer setMainPage={setMainPage} />
         </>

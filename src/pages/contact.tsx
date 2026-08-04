@@ -7,7 +7,9 @@ const Contact = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
         <div>
             <Header setMainPage={setMainPage} />
             <div className="page-content">
-                <h1>Contact Us</h1>
+                <h1>Contact Us: Page explaining different ways to get in touch with company</h1>
+                <h1> Typical email / (fake) address</h1>
+                <h1> Also broken weblink to submit demo for signing</h1>
             </div>
             <Footer setMainPage={setMainPage} />
         </div>

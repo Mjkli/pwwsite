@@ -1,5 +1,4 @@
 import "./Header.css";
-import { FaEarthAmericas } from "react-icons/fa6";
 
 
 function Header({ setMainPage }: { setMainPage: (page: string) => void }) {
