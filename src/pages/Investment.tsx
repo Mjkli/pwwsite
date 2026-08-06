@@ -2,15 +2,20 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
 import "../components/Core/core.css";
+import PageTabs from "../components/PageTabs/PageTabs";
 
 
 const Investment = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
+  const tabs = [
+    { label: 'Investment Opertunity', content: <h1>Investment Opertunity</h1> },
+    { label: 'Investment Call to action for reader', content: <h1>Investment Call to action for reader</h1> },
+  ];
+
   return (
     <div>
       <Header setMainPage={setMainPage} />
       <div className="page-content">
-        <h1>Investment Opertunity</h1>
-        <h1>Investment Call to action for reader</h1>
+        <PageTabs items={tabs} />
       </div>
       <Footer setMainPage={setMainPage} />
     </div>

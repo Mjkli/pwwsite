@@ -4,8 +4,6 @@
     justify-content: stretch;
     align-items: center;
     color: #e6fffa;
-    bottom: 0;
-    height: 300px;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +17,7 @@
     align-items: stretch;
     color: #e6fffa;
     bottom: 0;
-    height: 500px;
+    height: 250px;
     width: 100%;
     padding: 0;
 }

@@ -1,0 +1,45 @@
+.page-tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0;
+  padding-bottom: 1rem;
+}
+
+.page-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  padding-bottom: 0;
+  margin-bottom: -1px;
+  top: 0;
+}
+
+.page-tabs__button {
+  border-bottom: 0;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  transition: all 0.2s ease;
+  min-width: 319px;
+  height: 50px;
+}
+
+.page-tabs__button:hover {
+  background: #3ddfff;
+}
+
+.page-tabs__button--active {
+  background: #ffffff;
+  color: #000000;
+}
+
+.page-tabs__panel {
+  background: #ffffff;
+}
