@@ -13,6 +13,7 @@ const Demo = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
     return(
         <>
             <Header setMainPage={setMainPage} />
+            <div className="photo-container"></div>
             <div className="page-content">
                 <PageTabs items={tabs} />
             </div>

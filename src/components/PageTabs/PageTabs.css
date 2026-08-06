@@ -5,19 +5,16 @@
   align-items: left;
   gap: 0;
   padding-bottom: 1rem;
+  margin-top:-50px;
 }
 
 .page-tabs__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
-  padding-bottom: 0;
   margin-bottom: -1px;
-  top: 0;
 }
 
 .page-tabs__button {
-  border-bottom: 0;
   background: #000000;
   color: #ffffff;
   border-radius: 0;

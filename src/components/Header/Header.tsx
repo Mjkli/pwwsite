@@ -5,7 +5,7 @@ function Header({ setMainPage }: { setMainPage: (page: string) => void }) {
     return (
         <header className="header">
             <button className="header-button" onClick={() => setMainPage("Home")}/>
-            <div className="header-box"/>
+            {/* <div className="header-box"/> */}
         </header>
     );
 }
