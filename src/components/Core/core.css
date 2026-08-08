@@ -33,3 +33,36 @@
     background-size: cover; 
     margin-top: -200px;
 }
+
+.tab-copy {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    line-height: 1.75;
+    text-align: left;
+    font-family: 'Glegoo', 'Josefin Sans', sans-serif;
+}
+
+.tab-copy p {
+    margin-bottom: 1.25rem;
+}
+
+.tab-copy__item {
+    margin-bottom: 1.5rem;
+}
+
+.tab-copy__item h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Glegoo', 'Josefin Sans', sans-serif;
+}
+
+.tab-copy > p:last-child {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: 'Glegoo', 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}

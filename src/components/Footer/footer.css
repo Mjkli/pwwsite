@@ -5,7 +5,6 @@
     align-items: center;
     color: #e6fffa;
     width: 100%;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -28,15 +27,14 @@
     flex: 1;                    /* fill available width equally */
     width: 100%;                /* remove fixed 100px */
     margin: 0;                  /* remove gaps between buttons */
-    padding: 5px 0;             /* remove horizontal padding that was eating width */
     color: #e6fffa;
     background-color: transparent;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
-    border: 2px solid #000000;
     box-sizing: border-box;
     filter: grayscale(100%);
+    filter: brightness(-50%);
 }
 .footer-rnd {
     background-image: url("../../assets/rnd.png");

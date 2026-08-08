@@ -3,13 +3,17 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
 import "../components/Core/core.css";
 import PageTabs from "../components/PageTabs/PageTabs";
+import Portfolios from "./page-content/portfolios";
+import Insurance from "./page-content/insurance";
+import Computers from "./page-content/computers";
+import BlackLeatherGloves from "./page-content/blackgloves";
 
 const Management = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
     const tabs = [
-        { label: 'Financial portfolios', content: <h1>Financial portfolios</h1> },
-        { label: 'Insurance', content: <h1>Insurance</h1> },
-        { label: 'Computers', content: <h1>Computers</h1> },
-        { label: 'Black Lether gloves', content: <h1>Black Lether gloves</h1> },
+        { label: 'Financial portfolios', content: <Portfolios /> },
+        { label: 'Insurance', content: <Insurance /> },
+        { label: 'Computers', content: <Computers /> },
+        { label: 'Black Lether gloves', content: <BlackLeatherGloves /> },
     ];
 
     return(
