@@ -2,13 +2,12 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
 import "../components/Core/core.css";
 import PageTabs from "../components/PageTabs/PageTabs";
+import SecurityContent from "./page-content/security";
 
 
 const Security = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
     const tabs = [
-        { label: 'Security Page', content: <h1>Security Page</h1> },
-        { label: 'Top notch security personel', content: <h1>Top notch security personel</h1> },
-        { label: 'Security dog Availability', content: <h1>Security dog Availability</h1> },
+        { label: 'Security Page', content: <SecurityContent /> },
     ];
 
     return(

@@ -2,13 +2,13 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
 import "../components/Core/core.css";
 import PageTabs from "../components/PageTabs/PageTabs";
+import ResearchAndDevelopment from "./page-content/rnd_content";
+import BeeResearch from "./page-content/bee";
 
 const RnD = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
     const tabs = [
-        { label: 'R&D Page', content: <h1>R&D Page</h1> },
-        { label: 'Putting in the man hours', content: <h1>Puting in the man hours</h1> },
-        { label: 'Experementation', content: <h1>Experementation</h1> },
-        { label: 'Rip Bee', content: <h1>Rip Bee</h1> },
+        { label: 'Research & Development', content: <ResearchAndDevelopment /> },
+        { label: 'Bee Study', content: <BeeResearch /> },
     ];
 
     return(

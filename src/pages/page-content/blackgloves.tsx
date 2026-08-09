@@ -1,7 +1,7 @@
 function BlackLeatherGloves() {
     return(
         <>
-            <h3>Black Leather Gloves</h3>
+            <h1>Black Leather Gloves</h1>
             <div className="tab-copy">
                 <p>
                     Some things you wear. Black leather gloves, you become. Prestige Worldwide offers a curated collection of premium black leather gloves for artists who understand that image isn't everything — it's the only thing. From up-and-coming performers looking to make a first impression to top-tier musicians who've already made it and just want to look cool doing it, we've got a pair for every stage of your career. Below is a closer look at what we offer.
