@@ -11,7 +11,7 @@ function Footer({ setMainPage }: { setMainPage: (page: string) => void }) {
                 <button className="footer-button footer-security" onClick={() => setMainPage("Security")}>Security</button>
                 <button className="footer-button footer-arts" onClick={() => setMainPage("Demo")}> PWW Artists</button>
                 <button className="footer-button footer-merch" onClick={() => setMainPage("Merch")}>Merch</button>
-                <button className="footer-button footer-careers" onClick={() => setMainPage("Contact Us")}>Careers</button>
+                <button className="footer-button footer-careers" onClick={() => setMainPage("Contact Us")}>Contact Us</button>
             </footer>
             <div className="footer-bottom">
                 <p>© 2024 PWW. All rights reserved.</p>
