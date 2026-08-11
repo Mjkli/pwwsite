@@ -1,7 +1,7 @@
 function SecurityContent() {
     return(
         <>
-            <h3>Security</h3>
+            <h1>Security</h1>
             <div className="tab-copy">
                 <p>
                     Protecting what's yours sometimes takes brute force, sometimes takes a very good dog, and sometimes just takes two guys who really don't want anyone else in the house. At Prestige Worldwide, our Security division draws on decades of hard-won, occasionally embarrassing field experience. Below is a look at our core capabilities.

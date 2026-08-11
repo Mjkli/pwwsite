@@ -27,11 +27,31 @@
     filter: grayscale(100%);
     box-sizing: border-box;
     border-color: black;
-    background-image: url("../../../assets/signon_building.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
     margin-top: -200px;
+}
+.management-photo {
+    background-image: url("../../../assets/signon_building.png");
+}
+.rd-photo {
+    background-image: url("../../../assets/building_with_sign_v2.png");
+}
+.sec-photo {
+    background-image: url("../../../assets/security_header.jpg");
+}
+.demo-photo {
+    background-image: url("../../../assets/boat.jpg");
+}
+.invest-photo {
+    background-image: url("../../../assets/investing.jpg");
+}
+.merch-photo {
+    background-image: url("../../../assets/merch_header.jpg");
+}
+.contact-photo {
+    background-image: url("../../../assets/contact.jpg");
 }
 
 .tab-copy {

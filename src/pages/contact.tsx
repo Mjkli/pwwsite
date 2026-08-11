@@ -6,7 +6,7 @@ const Contact = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
     return(
         <>
             <Header setMainPage={setMainPage} />
-            <div className="photo-container"></div>
+            <div className="photo-container contact-photo"></div>
             <h1>Contact Us</h1>
             <div className="page-content">
                 <div className="tab-copy">

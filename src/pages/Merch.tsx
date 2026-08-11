@@ -2,20 +2,20 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
 import "../components/Core/core.css";
-import PageTabs from "../components/PageTabs/PageTabs";
 
 const Merch = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
-    const tabs = [
-        { label: 'Merch Page: Call to action to purchase our limited supply', content: <h1>Merch Page: Call to action to purchase our limited supply</h1> },
-        { label: 'Show sold out on most items', content: <h1>Show sold out on most items</h1> },
-    ];
-
     return(
         <>
             <Header setMainPage={setMainPage} />
-            <div className="photo-container"></div>
+            <div className="photo-container merch-photo"></div>
+            <h1>Merch</h1>
             <div className="page-content">
-                <PageTabs items={tabs} />
+                <div className="tab-copy tab-copy--centered">
+                    <h4 className="tab-copy__coming-soon">Coming Soon!</h4>
+                    <p>
+                        We're putting the finishing touches on the Prestige Worldwide merch line — because nothing says "serious music financial/security/R&D services company" quite like a hat with our logo on it. Check back soon.
+                    </p>
+                </div>
             </div>
             <Footer setMainPage={setMainPage} />
         </>
