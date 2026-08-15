@@ -1,0 +1,14 @@
+name: Build Website
+on:
+  push: ["master"]
+jobs:
+  website:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Run Unit Tests
+        run: |
+          npm test 
