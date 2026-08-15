@@ -70,6 +70,11 @@ Run tests with Vitest.
 
 ## Notes
 
-- The app loads Font Awesome and Google Fonts from the root HTML file.
 - The `src/components/Core/core.tsx` component selects page components dynamically using the `mainPage` state.
 - The navigation drawer is toggled using a hamburger button in `src/components/NavBar/NavBar.tsx`.
+
+
+
+- After local development is done. then I will probably Host the website / pictures in a s3 bucket. 
+    Then all the images will be set with a url rather then file path
+
