@@ -52,4 +52,5 @@ jobs:
         run: exit 1
       
       - name: Terraform apply
+        working-directory: tf-infra
         run: terraform apply -input=false
