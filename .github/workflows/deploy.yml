@@ -5,3 +5,9 @@ on:
       - 'release/*'
 
 jobs:
+  Deploy:
+    name: Deploy website to AWS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
