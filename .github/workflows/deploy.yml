@@ -1,9 +1,8 @@
 name: Deploy to public
-on: "push"
-# on:
-#   push:
-    # tags:
-    #   - 'release/*'
+on:
+  push:
+    tags:
+      - 'release/*'
 
 jobs:
   Deploy:
