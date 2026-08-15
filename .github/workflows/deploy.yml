@@ -1,13 +1,40 @@
 name: Deploy to public
-on:
-  push:
-    tags:
-      - 'release/*'
+on: "push"
+# on:
+#   push:
+    # tags:
+    #   - 'release/*'
 
 jobs:
   Deploy:
     name: Deploy website to AWS
     runs-on: ubuntu-latest
+    container: mjkli/terraform-aws:latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: "us-west-1"
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Terraform init
+        run: terraform init
+        working-directory: tf-infra
+
+      - name: Terraform validate
+        run: terraform validate
+        id: validate
+        working-directory: tf-infra
+
+      - name: Terraform validate status
+        if: steps.validate.outcome == 'falure'
+        run: exit 1
+
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -input=false
+        working-directory: tf-infra
+
+      - name: Terraform plan status
+        if: steps.plan.outcome == 'falure'
+        run: exit 1
