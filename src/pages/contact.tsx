@@ -20,7 +20,7 @@ const Contact = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
                             For general inquiries, reach us at <strong>info@pww.mjkli.com</strong>. Please allow 3–5 business days for a response, and an additional 3–5 business days for us to remember we have an email inbox.
                         </p>
                         <p>
-                            Mailing address: Prestige Worldwide LLC, Oceanwide Plaza, are located at 1142–1164 S Figueroa St, Los Angeles, CA 90015. Packages left on the lawn will be accepted, though we cannot guarantee they'll survive contact with the dog.
+                            Mailing address: Prestige Worldwide LLC, Oceanwide Plaza, are located at 1101 Flower Street, Downtown Los Angeles, CA 90015. Packages left on the lawn will be accepted, though we cannot guarantee they'll survive contact with the dog.
                         </p>
                     </div>
 
