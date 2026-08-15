@@ -13,7 +13,7 @@ jobs:
         run: npm i
       
       - name: Run Unit Tests
-        run: npm test
+        run: npx vitest run --coverage
       
       - name: Run Build
         run: npm run build
