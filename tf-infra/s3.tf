@@ -37,6 +37,6 @@ data "aws_iam_policy_document" "pww_bucket_policy" {
 }
 
 resource "aws_s3_bucket_policy" "pww_bucket_policy" {
-  bucket = aws_s3_bucket.pww_bucket.id
+  bucket = aws_s3_bucket.pww-bucket.id
   policy = data.aws_iam_policy_document.pww_bucket_policy.json
 }
