@@ -50,3 +50,6 @@ jobs:
       - name: Terraform plan status
         if: steps.plan.outcome == 'falure'
         run: exit 1
+      
+      - name: Terraform apply
+        run: terraform apply -input=false
