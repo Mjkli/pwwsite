@@ -4,10 +4,16 @@ jobs:
   website:
     name: Run Tests
     runs-on: ubuntu-latest
+    container: mjkli/react-vite
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
       
+      - name: Install deps
+        run: npm i
+      
       - name: Run Unit Tests
-        run: |
-          npm test 
+        run: npm test
+      
+      - name: Run Build
+        run: npm run build
