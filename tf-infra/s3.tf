@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "pww-bucket" {
+resource "aws_s3_bucket" "pww_bucket" {
   bucket = "pww-mjkli-bucket"
 }
 
-resource "aws_s3_bucket_public_access_block" "pww-pab" {
-  bucket = aws_s3_bucket.pww-bucket.id
+resource "aws_s3_bucket_public_access_block" "pww_pab" {
+  bucket = aws_s3_bucket.pww_bucket.id
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
@@ -37,6 +37,6 @@ data "aws_iam_policy_document" "pww_bucket_policy" {
 }
 
 resource "aws_s3_bucket_policy" "pww_bucket_policy" {
-  bucket = aws_s3_bucket.pww-bucket.id
+  bucket = aws_s3_bucket.pww_bucket.id
   policy = data.aws_iam_policy_document.pww_bucket_policy.json
 }
