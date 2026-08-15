@@ -1,6 +1,5 @@
 name: Build Website
-on:
-  push: ["master"]
+on: "push" 
 jobs:
   website:
     name: Run Tests
