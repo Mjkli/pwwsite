@@ -53,4 +53,4 @@ jobs:
       
       - name: Terraform apply
         working-directory: tf-infra
-        run: terraform apply -input=false
+        run: terraform apply -auto-approve -input=false
