@@ -40,6 +40,30 @@ jobs:
             exit 1
           fi
 
+  build:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    container: mjkli/react-vite
+    needs: ["branch_check"]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Install deps
+        run: npm i
+      
+      - name: Run Unit Tests
+        run: npx vitest run --coverage
+      
+      - name: Run Build
+        run: npm run build
+      
+      - name: Uploading Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: pww-build
+          path: dist/
+
   infrastructure:
     name: Deploy website to AWS
     runs-on: ubuntu-latest
@@ -78,7 +102,7 @@ jobs:
     name: Upload to s3 bucket
     runs-on: ubuntu-latest
     container: mjkli/terraform-aws:latest
-    needs: ["infrastructure", "branch_check"]
+    needs: ["infrastructure", "branch_check", "build"]
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
