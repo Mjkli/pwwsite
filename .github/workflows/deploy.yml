@@ -5,10 +5,24 @@ on:
       - 'release/*'
 
 jobs:
-  Deploy:
+  branch_check:
+    name: Main check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: |
+          if git branch --contains ${{ github.ref_name }} | grep -q "main"; then
+            echo "Tag is on main"
+          else
+            echo "Tag is NOT on main"
+            exit 1
+          fi
+   
+  infrastructure:
     name: Deploy website to AWS
     runs-on: ubuntu-latest
     container: mjkli/terraform-aws:latest
+    needs: ["branch_check"]
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -37,3 +51,22 @@ jobs:
       - name: Terraform plan status
         if: steps.plan.outcome == 'falure'
         run: exit 1
+  
+  Upload:
+    name: Upload to s3 bucket
+    runs-on: ubuntu-latest
+    container: mjkli/terraform-aws:latest
+    needs: ["infrastructure", "branch_check"]
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: "us-west-1"
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pww-build
+          path: dist/
+      
+      - name: Upload to s3 bucket
+        run: aws s3 sync dist/ s3://pww-mjkli-bucket
