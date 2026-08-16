@@ -3,11 +3,11 @@ import "./slide.css"
 
 function SlideShow() {
     const images = [
-        "../../../assets/artists/artist1.jpg",
-        "../../../assets/artists/artist2.jpg",
-        "../../../assets/artists/artist3.jpg",
-        "../../../assets/artists/artist4.jpg",
-        "../../../assets/artists/artist5.jpg",
+        "/assets/artists/artist1.jpg",
+        "/assets/artists/artist2.jpg",
+        "/assets/artists/artist3.jpg",
+        "/assets/artists/artist4.jpg",
+        "/assets/artists/artist5.jpg",
     ];
 
     const [imgIndex, setImgIndex] = useState(0);

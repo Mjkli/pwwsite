@@ -23,8 +23,7 @@ jobs:
         with:
           name: pww-build
           path: dist/
-
-  
+ 
   infrastructure:
     name: Verify Infrastructure
     runs-on: ubuntu-latest

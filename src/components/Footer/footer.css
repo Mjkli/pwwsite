@@ -37,37 +37,37 @@
     filter: brightness(-50%);
 }
 .footer-rnd {
-    background-image: url("../../assets/rnd.png");
+    background-image: url("/assets/rnd.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .footer-security {
-    background-image: url("../../assets/security.png");
+    background-image: url("/assets/security.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .footer-management {
-    background-image: url("../../assets/management.png");
+    background-image: url("/assets/management.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .footer-arts {
-    background-image: url("../../assets/artist.png");
+    background-image: url("/assets/artist.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .footer-merch {
-    background-image: url("../../assets/merch.png");
+    background-image: url("/assets/merch.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .footer-careers {
-    background-image: url("../../assets/careers.png");
+    background-image: url("/assets/careers.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

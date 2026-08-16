@@ -15,7 +15,7 @@
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
     border: none;
     z-index: 1150;
-    background-image: url("../../assets/logo.png");
+    background-image: url("/assets/logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
