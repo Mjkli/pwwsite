@@ -65,3 +65,23 @@ jobs:
         working-directory: tf-infra
         run: terraform apply -auto-approve -input=false
   
+  Upload:
+    name: Upload to s3 bucket
+    runs-on: ubuntu-latest
+    container: mjkli/terraform-aws:latest
+    needs: ["website", "infrastructure"]
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: "us-west-1"
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pww.tar.gz
+      
+      - name: unzip build
+        run: tar -xzvf pww.tar.gz -C dist/
+      
+      - name: Upload to s3 bucket
+        run: aws s3 sync dist/ s3://pww-mjkli-bucket
