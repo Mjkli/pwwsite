@@ -10,6 +10,11 @@ resource "aws_cloudfront_distribution" "pww_cdn" {
   enabled             = true
   default_root_object = "index.html"
 
+  aliases = [
+    "pww.mjkli.com"
+  ]
+
+
   origin {
     domain_name              = aws_s3_bucket.pww_bucket.bucket_regional_domain_name
     origin_id                = "pww-s3-origin"
