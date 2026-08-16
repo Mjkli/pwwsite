@@ -18,14 +18,11 @@ jobs:
       - name: Run Build
         run: npm run build
       
-      - name: Compress build
-        run: tar -czvf pww.tar.gz dist/ 
-      
       - name: Uploading Build
         uses: actions/upload-artifact@v4
         with:
           name: pww-build
-          path: pww.tar.gz
+          path: dist/
 
   
   infrastructure:
