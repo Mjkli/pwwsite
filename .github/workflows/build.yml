@@ -48,7 +48,7 @@ jobs:
         working-directory: tf-infra
 
       - name: Terraform validate status
-        if: steps.validate.outcome == 'falure'
+        if: steps.validate.outcome == 'failure'
         run: exit 1
 
       - name: Terraform Plan
@@ -57,5 +57,5 @@ jobs:
         working-directory: tf-infra
 
       - name: Terraform plan status
-        if: steps.plan.outcome == 'falure'
+        if: steps.plan.outcome == 'failure'
         run: exit 1

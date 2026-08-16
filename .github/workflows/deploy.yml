@@ -9,15 +9,22 @@ jobs:
     name: Main check
     runs-on: ubuntu-latest
     steps:
-      - name: Check
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - name: Verify tag points to a commit on main
         run: |
-          if git branch --contains ${{ github.ref_name }} | grep -q "main"; then
-            echo "Tag is on main"
+          git fetch origin main --depth=1
+          if git merge-base --is-ancestor HEAD origin/main; then
+            echo "Tag points to a commit that is already on main"
           else
-            echo "Tag is NOT on main"
+            echo "Tag is not on main"
             exit 1
           fi
-   
+
   infrastructure:
     name: Deploy website to AWS
     runs-on: ubuntu-latest
@@ -40,7 +47,7 @@ jobs:
         working-directory: tf-infra
 
       - name: Terraform validate status
-        if: steps.validate.outcome == 'falure'
+        if: steps.validate.outcome == 'failure'
         run: exit 1
 
       - name: Terraform Plan
@@ -49,7 +56,7 @@ jobs:
         working-directory: tf-infra
 
       - name: Terraform plan status
-        if: steps.plan.outcome == 'falure'
+        if: steps.plan.outcome == 'failure'
         run: exit 1
   
   Upload:
