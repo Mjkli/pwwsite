@@ -14,13 +14,29 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Verify tag points to a commit on main
+      - name: Verify tag points to a commit on the default branch
         run: |
-          git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
-          if git merge-base --is-ancestor HEAD origin/main; then
-            echo "Tag points to a commit that is already on main"
+          git fetch --no-tags --prune origin
+          default_branch=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
+
+          if [ -z "$default_branch" ]; then
+            for candidate in main master; do
+              if git ls-remote --exit-code --heads origin "$candidate" >/dev/null 2>&1; then
+                default_branch="$candidate"
+                break
+              fi
+            done
+          fi
+
+          if [ -z "$default_branch" ]; then
+            echo "Could not determine the default branch from origin"
+            exit 1
+          fi
+
+          if git merge-base --is-ancestor HEAD "origin/$default_branch"; then
+            echo "Tag points to a commit that is already on $default_branch"
           else
-            echo "Tag is not on main"
+            echo "Tag is not on $default_branch"
             exit 1
           fi
 
