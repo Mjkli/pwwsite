@@ -32,7 +32,7 @@
     height: 425px;
     background-color: black;
     opacity: 0.4;
-    z-index: 1100;   /* below the button, but positioned so it can render behind it */
+    z-index: 1100;
 }
 
 @media (max-width: 768px) {
@@ -43,5 +43,6 @@
 
     .header-box {
         height: 240px;
+        background-color: black;
     }
 }
