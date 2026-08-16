@@ -41,3 +41,23 @@
     height: 40px;
     width: 40px;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        width: min(260px, 80vw);
+    }
+
+    .navbutton {
+        width: calc(100% - 20px);
+        margin: 8px 10px;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2100;
+    }
+}

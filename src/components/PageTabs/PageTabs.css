@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -1px;
+  width: 100%;
 }
 
 .page-tabs__button {
@@ -39,4 +40,21 @@
 
 .page-tabs__panel {
   background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .page-tabs {
+    margin-top: 0;
+  }
+
+  .page-tabs__list {
+    display: block;
+  }
+
+  .page-tabs__button {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    font-size: 0.72rem;
+  }
 }
