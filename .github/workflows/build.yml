@@ -81,7 +81,7 @@ jobs:
           name: pww-build
       
       - name: unzip build
-        run: tar -xzvf pww-build.zip -C dist/
+        run: unzip pww-build.zip
       
       - name: Upload to s3 bucket
         run: aws s3 sync dist/ s3://pww-mjkli-bucket
