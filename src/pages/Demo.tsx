@@ -21,15 +21,17 @@ const Demo = ({ setMainPage }: { setMainPage: (page: string) => void }) => {
                         </p>
                     </div>
                     <h2>Boats 'N Hoes - Huff 'N Doback</h2>
-                    <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/yFiOGiT8zBQ"
-                        title="Boats and Hoes - Huff 'N Doback"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    ></iframe>
+                    <div className="youtube-container">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/yFiOGiT8zBQ"
+                            title="Boats and Hoes - Huff 'N Doback"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        />
+                    </div>
                 </div>
             </div>
             <Footer setMainPage={setMainPage} />
